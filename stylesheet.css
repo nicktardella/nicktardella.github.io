@@ -12,3 +12,11 @@ font-size: 12pt;
 
 }
 
+p{
+	font-family: helvetica light;,sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color:black;
+}
