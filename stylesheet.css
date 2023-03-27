@@ -1,6 +1,14 @@
 body {
 
-background-color: beige;
+background-color: #F5E5D0;
 font-family: helvetica, sans-serif;
+font-size: 20pt;
+}
+
+.box-1{
+position:fixed;
+font-size: 12pt;
+
+
 }
 
