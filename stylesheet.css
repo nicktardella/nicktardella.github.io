@@ -1,8 +1,8 @@
 body {
 
 background-color: #F5E5D0;
-font-family: helvetica, sans-serif;
-font-size: 20pt;
+font-family: gill sans, sans-serif;
+font-size: 30pt;
 }
 
 .box-1{
@@ -13,7 +13,8 @@ font-size: 12pt;
 }
 
 p{
-	font-family: helvetica light;,sans-serif;
+	font-family: arial;,sans-serif;
+	font-size: 18pt;
 }
 
 a{
