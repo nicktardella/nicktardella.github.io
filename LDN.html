@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+   <table style="width:100%">
+ <tr>
+    <td><a href="index.html">Nick Tardella</td>
+    <td><a href="designwork.html">Design Work</td>
+    <td><a href="aboutme.html">About me</td>
+  </tr>
+
+  <tr>
+    <td> 
+    <marquee scrollamount="40" marquee behavior=scroll style="font-size: 12pt;">
+      <a href="https://www.instagram.com/nicktardella/?hl=en" target="_blank">
+    @nicktardella </a> </marquee>
+</td>
+    <td></td>
+    <td>  </td>
+  </tr>
+  
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+
+
+</table>
+
+<div class="div1">
+
+<div class="container">
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook1.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook2.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook3.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook4.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook5.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook6.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook7.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook8.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="images/LondonPhotobook/LondonPhotoBook9.jpeg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)"><</a>
+  <a class="next" onclick="plusSlides(1)">></a>
+  
+</div>
+
+
+</div>
+
+<p> 
+<b>London Photobook</b>
+<br>
+<br>
+This is a photobook from my time studying in London. It's a fun little publication that documents all the fun little events.  </p>
+
+
+<br>
+<br>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>
