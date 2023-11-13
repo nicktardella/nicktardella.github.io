@@ -1,8 +1,15 @@
 body {
+background-image: url(images/catbg.gif); 
+background-repeat:no-repeat ;
+background-size:100%;
+margin: 0;
+padding: 1%;
 
-background-color: #F5E5D0;
+
+background-color: black;
 font-family: Helvetica, sans-serif;
-font-size: 30pt;
+font-size: 12pt;
+color: white;
 }
 
 .box-1{
@@ -14,21 +21,29 @@ font-size: 12pt;
 
 p{
 	font-family: helvetica;,sans-serif;
-	font-size: 18pt;
+	font-size: 12pt;
 }
 
 a{
 	text-decoration: none;
-	color:black;
+	color:white;
+  sel
 }
 a:hover {
-  color: deeppink;
-  background-color: transparent;
+  color: black;
 }
+
+
+/*Class to affect the ENTIRE page at once */
+* {
+  
+}
+
 .div1{
 	border-color: deeppink;
 	width: 64.8%;
 	float: right;
+  cursor: crosshair;
 }
 
 .row {
@@ -37,6 +52,7 @@ a:hover {
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
   padding: 0 4px;
+  cursor: crosshair;
 }
 
 /* Create 3 equal columns that sits next to each other */
@@ -45,12 +61,14 @@ a:hover {
   flex: 32%;
   max-width: 32%;
   padding: 0 5px;
+  cursor: crosshair;
 }
 
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  cursor: crosshair;
 }
 
 
@@ -72,6 +90,9 @@ img {
   position: relative;
 }
 
+.add_crosshair {
+  cursor: crosshair;
+}
 
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -79,11 +100,67 @@ img {
   cursor: pointer;
 }
 
+.pos-relative {
+   position: relative;
+}
+
+
+.width50 {
+  width: 50%;
+}
+
 /* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
+.prev {
   position: absolute;
+  top: 50%;
+  float: right;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  position: absolute;
+  float: left;
+  top: 50%;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev50 {
+  position: absolute;
+  top: 50%;
+  float: left;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next50 {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+
+.next2 {
+  cursor: pointer;
+  position: relative;
   top: 40%;
   width: auto;
   padding: 16px;
@@ -125,3 +202,15 @@ img {
   opacity: 1;
 }
 
+
+.instagram-link {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    text-align: right;
+  }
+  .instagram-link img {
+    width: 100px;
+    height: 100px;
+  }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+   <table style="width:100%">
+ <tr>
+    <td><a href="index.html">Nick Tardella</td>
+    <td><a href="designwork.html">Work</td>
+    <td><a href="aboutme.html">About me</td>
+  </tr>
+
+  <tr>
+    <td> 
+    
+</td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+
+
+</table>
+
+<div class="div1">
+
+<div class="container ">
+  <div class="mySlides">
+    <img src="images/AcademicWork/ConcertPoster/Booked/BookedCover.jpg" style="width:50%;">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/AcademicWork/ConcertPoster/Booked/BookedInsideCov.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/AcademicWork/ConcertPoster/Booked/BookedIntro.jpg" style="width:50%">
+  </div>
+    
+  <div class="mySlides">
+    <img src="images/AcademicWork/ConcertPoster/Booked/BookedP1.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/AcademicWork/ConcertPoster/Booked/Bookedp2.jpg" style="width:50%">
+  </div>
+    
+  <a class="prev50" onclick="plusSlides(-1)"><</a>
+  <a class="next50" onclick="plusSlides(1)">></a>
+  
+</div>
+
+
+</div>
+
+<p> 
+<b>Booked</b>
+<br>
+<br>
+These two posters are a part of a larger publication created with my peers at UConn where we each designed a set of posters from events we may have missed because of Covid. The posters were centered around the Swiss Typography style.  </p>
+
+
+<br>
+<br>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+<a class="instagram-link" href="https://www.instagram.com/nicktardella/?hl=en" target="_blank">
+  <img src="Images/LePetit.png" alt="Follow me on Instagram">
+</a>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+   <table style="width:100%">
+ <tr>
+    <td><a href="index.html">nt</td>
+    <td><a href="designwork.html">work</td>
+    <td><a href="aboutme.html">about me</td>
+  </tr>
+
+  <tr>
+    <td> 
+    
+</td>
+    <td></td>
+    <td>  </td>
+  </tr>
+  
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+
+
+</table>
+
+<div class="div1">
+  <div class="container">
+
+  <div class="mySlides ">
+    <img src="images/Seniorproj/aab1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/Seniorproj/aab2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/Seniorproj/aab3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <img src="images/Seniorproj/aab4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/Seniorproj/aab5.jpg" style="width:100%">
+  </div>
+    
+    <div class="mySlides">
+    <img src="images/Seniorproj/aab6.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/Seniorproj/aab7.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/Seniorproj/aab8.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="images/Seniorproj/aab9.jpg" style="width:100%">
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)"><</a>
+  <a class="next" onclick="plusSlides(1)">></a>
+  
+</div>
+
+</div>
+
+<p> 
+<b>Deteriora</b>
+<br>
+<br>
+This a is a custom made font. 
+<br>
+<br> 
+<br>
+<br>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<style>
+  .instagram-link {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+  }
+  .instagram-link img {
+    width: 100px;
+    height: 100px;
+  }
+</style>
+
+<a class="instagram-link" href="https://www.instagram.com/nicktardella/?hl=en" target="_blank">
+  <img src="Images/LePetit.png" alt="Follow me on Instagram">
+</a>
+</body>
+</html>

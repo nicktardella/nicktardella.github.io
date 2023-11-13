@@ -1,37 +1,116 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>My Portfolio</title>
     <link rel="stylesheet" href="stylesheet.css">
-  </head>
-  <body>
-   <table style="width:100%">
- <tr>
-    <td>Nick Tardella</td>
-    <td><a href="designwork.html">Design Work</td>
-    <td><a href="aboutme.html"> About me</td>
-  </tr>
+    <script>
+        let isPaused = false; // Initially, the rotation is not paused
+        let intervalId; // To store the setInterval ID
 
-  <tr>
-    <td> 
-    <marquee scrollamount="40" marquee behavior=scroll style="font-size: 12pt;">
-      <a href="https://www.instagram.com/nicktardella/?hl=en" target="_blank">
-    @nicktardella </a> </marquee>
-</td>
-    <td></td>
-    <td>  </td>
-  </tr>
-  
-  <tr>
-    <td> </td>
-    <td></td>
-    <td> </td>
-  </tr>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".images img");
+            let currentIndex = 0;
 
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.style.display = i === index ? "block" : "none";
+                });
+            }
 
-</table>
+            function nextImage() {
+                if (!isPaused) {
+                    showImage(currentIndex);
+                    currentIndex = (currentIndex + 1) % images.length;
+                }
+            }
 
-<img src="Images/TrainHPage.png" width="63%" align="right">
-   
+            // Initially, hide all images except the first one
+            images.forEach((img, i) => {
+                img.style.display = i === 0 ? "block" : "none";
+            });
+
+            // Start the image rotation
+            intervalId = setInterval(nextImage, 2000);
+
+            // Add click event listeners to pause and resume rotation
+            images.forEach((img, i) => {
+                img.addEventListener("click", function () {
+                    isPaused = !isPaused; // Toggle the paused state
+                    if (isPaused) {
+                        clearInterval(intervalId); // Pause rotation
+                    } else {
+                        intervalId = setInterval(nextImage, 2000); // Resume rotation
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .images {
+            text-align: left;
+        }
+
+        .images img {
+            max-width: 100%; /* Set a maximum width for the images */
+            height: 500px; /* Set a maximum height for the images (adjust as needed) */
+            margin-bottom: 10px; /* Add space between images */
+        }
+
+        .table-container {
+            clear: both; /* Clear the float from the table */
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .instagram-link {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: right;
+        }
+
+        .instagram-link img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="images">
+        <img src="Images/BookedCover.jpg" alt="BookedCover">
+        <img src="Images/BookedInsideCov.jpg" alt="BookedInsideCov">
+        <img src="Images/LePetit.png" alt="LePetit">
+        <!-- Add more images as needed -->
+    </div>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <td>nt</td>
+                <td><a href="designwork.html">work</td>
+                <td><a href="aboutme.html"> about me</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    
+    </div>
 </body>
 </html>
