@@ -1,5 +1,7 @@
 body {
   
+
+
 background-repeat:no-repeat ;
 background-size:100%;
 margin: 0;
@@ -7,10 +9,12 @@ padding: 1%;
 
 
 background-color: black;
-font-family: Helvetica, sans-serif;
+font-family: neue-haas-grotesk-text, sans-serif;
 font-size: 12pt;
 color: white;
 }
+
+
 
 .box-1{
 position:fixed;
@@ -19,9 +23,11 @@ font-size: 12pt;
 
 }
 
+
+
 p{
-	font-family: helvetica;,sans-serif;
-	font-size: 12pt;
+	font-family: neue-haas-grotesk-text;,sans-serif;
+	font-size: 9pt;
 }
 
 a{
@@ -30,7 +36,12 @@ a{
   sel
 }
 a:hover {
-  color: black;
+  color: whitesmoke;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 12pt;
+font-weight: 700;
+font-style: normal;
+
 }
 
 
@@ -214,3 +225,15 @@ img {
     width: 100px;
     height: 100px;
   }
+
+
+nav a{display:inline-block;
+  padding:0px 12px 0px 0px;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+font-weight: 700;
+font-style: italic;
+  font-size: 12pt;
+  border: 2px, white;
+  
+
+ }

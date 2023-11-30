@@ -3,50 +3,97 @@
 <head>
     <title>My Portfolio</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script>
-        let isPaused = false; // Initially, the rotation is not paused
-        let intervalId; // To store the setInterval ID
+<!-- Add this script after your existing script in the <head> section -->
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const images = document.querySelectorAll(".images img");
-            let currentIndex = 0;
+    <nav>
+<a id="ntLink" href="index.html">nt</a>
+<a href="aboutme.html">about me</a> 
+</nav>
 
-            function showImage(index) {
-                images.forEach((img, i) => {
-                    img.style.display = i === index ? "block" : "none";
-                });
-            }
+<br>
 
-            function nextImage() {
-                if (!isPaused) {
-                    showImage(currentIndex);
-                    currentIndex = (currentIndex + 1) % images.length;
-                }
-            }
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const ntLink = document.getElementById("ntLink");
+    const images = document.querySelectorAll(".images img");
+    const popupText = document.getElementById("popupText");
+    let currentIndex = 0;
 
-            // Initially, hide all images except the first one
-            images.forEach((img, i) => {
-                img.style.display = i === 0 ? "block" : "none";
-            });
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.style.display = i === index ? "block" : "none";
+      });
+    }
 
-            // Start the image rotation
-            intervalId = setInterval(nextImage, 2000);
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
 
-            // Add click event listeners to pause and resume rotation
-            images.forEach((img, i) => {
-                img.addEventListener("click", function () {
-                    isPaused = !isPaused; // Toggle the paused state
-                    if (isPaused) {
-                        clearInterval(intervalId); // Pause rotation
-                    } else {
-                        intervalId = setInterval(nextImage, 2000); // Resume rotation
-                    }
-                });
-            });
-        });
-    </script>
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    images.forEach((img, i) => {
+      img.style.display = i === 0 ? "block" : "none";
+      img.addEventListener("click", function () {
+        nextImage();
+      });
+    });
+
+    ntLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      showPopupText("This is just a bit of work lol");
+    });
+
+    ntLink.addEventListener("dblclick", function () {
+      popupText.style.display = "none";
+    });
+
+    document.addEventListener("keydown", function (event) {
+      switch (event.key) {
+        case "ArrowLeft":
+          prevImage();
+          break;
+        case "ArrowRight":
+          nextImage();
+          break;
+      }
+    });
+
+    function showPopupText(text) {
+      popupText.innerHTML = text;
+      popupText.style.display = "block";
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <style>
+
+
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
         .images {
             text-align: left;
         }
@@ -82,35 +129,39 @@
 
 <body>
     <div class="images">
-        <img src="Images/BookedCover.jpg" alt="BookedCover">
-        <img src="Images/BookedInsideCov.jpg" alt="BookedInsideCov">
-        <img src="Images/LePetit.png" alt="LePetit">
+        <img src="Images/aab9.jpg" alt="All Aboard">
+        <img src="Images/wirip.jpg" alt="When It Rains">
+        <img src="Images/wai.png" alt="When am I">
+        <img src="Images/wais2.jpg" alt="When am I">
+        <img src="Images/cutthisposter.png" alt="Cut Poster">
+        <img src="Images/Deteriora.JPG" alt="Deteriora">
+        <img src="Images/ecography.png" alt="Ecography">
+        <img src="Images/Feel3.png" alt="Feel">
+        <img src="Images/Feel4.png" alt="Feel">
+        <img src="Images/framed3.png" alt="Framed">
+        <img src="Images/HBCover.jpg" alt="Heartbeat">
+        <img src="Images/gd2.JPEG" alt="GD2">
+        <img src="Images/lpb3.png" alt="London Photo Book">
+        <img src="Images/Pissin.jpg" alt="Pissin">
+        <img src="Images/ratealert.png" alt="Rate Alert">
+        <img src="Images/lesscars.png" alt="Less Cars">
+        <img src="Images/ndtsft.png" alt="No Distance Too Short for Transit">
+        <img src="Images/ndtsft2.png" alt="No Distance too Short for Transit">
+        <img src="Images/ssfc.jpg" alt="School Strike for Climate">
         <!-- Add more images as needed -->
     </div>
 
-    <div class="table-container">
-        <table>
-            <tr>
-                <td>nt</td>
-                <td><a href="designwork.html">work</td>
-                <td><a href="aboutme.html"> about me</td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-    </div>
 
     
     </div>
+
+<div id="popupText" style="display: none; font-size: 9pt;">
+  <!-- Pop-up text will appear here when a tab is clicked -->
+</div>
+
+    <style>
+  @import url("https://use.typekit.net/ish2oli.css");
+</style>
+
 </body>
 </html>
