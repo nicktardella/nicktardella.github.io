@@ -227,12 +227,12 @@ img {
   }
 
 
-nav a{display:inline-block;
+nav p{display:inline-block;
   padding:0px 12px 0px 0px;
   font-family: "neue-haas-grotesk-text", sans-serif;
 font-weight: 700;
 font-style: italic;
-  font-size: 12pt;
+  font-size: 200%;
   border: 2px, white;
   
 
