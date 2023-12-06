@@ -9,7 +9,9 @@ padding: 1%;
 
 
 background-color: black;
-font-family: neue-haas-grotesk-text, sans-serif;
+font-family: "freight-text-pro", serif;
+font-weight: 300;
+font-style: normal;
 font-size: 12pt;
 color: white;
 }
@@ -26,8 +28,9 @@ font-size: 12pt;
 
 
 p{
-	font-family: neue-haas-grotesk-text;,sans-serif;
-	font-size: 9pt;
+	font-family: "freight-text-pro", serif;
+font-weight: 300;
+font-style: normal;
 }
 
 a{
@@ -36,8 +39,8 @@ a{
   sel
 }
 a:hover {
-  color: whitesmoke;
-  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: dodgerblue;
+
   font-size: 12pt;
 font-weight: 700;
 font-style: normal;
@@ -152,7 +155,7 @@ img {
   font-weight: bold;
   font-size: 20px;
   user-select: none;
-  -webkit-user-select: none;
+  -webkit-user-select: none;x
 }
 
 
@@ -228,12 +231,20 @@ img {
 
 
 nav p{display:inline-block;
-  padding:0px 12px 0px 0px;
+  padding:0px 10px 0px 0px;
   font-family: "neue-haas-grotesk-text", sans-serif;
 font-weight: 700;
 font-style: italic;
-  font-size: 200%;
+  font-size: 100%;
   border: 2px, white;
   
 
  }
+/* -----MOBILE-----*/
+
+
+@media (max-width: 30em) {
+  .image-container {
+    width: 80vw;
+  }
+}
