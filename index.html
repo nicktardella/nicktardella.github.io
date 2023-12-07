@@ -24,7 +24,7 @@
         }
 
         .images img {
-            width: 35%;
+            width: 32%;
             max-height: 100%;
             margin-bottom: 10px;
         }
@@ -32,7 +32,7 @@
         .text-container {
             position: absolute;
             top: 0;
-            left: 36%;
+            left: 33%;
             width: 30%;
             background-color: none;
             padding: 0px;
@@ -105,7 +105,10 @@
             function getImageText(index) {
                 // Add your text for each image here
                 const textArray = [
-                    "01 <br> All Aboard <br> 05.2023 <br> <br> All Aboard is a multimedia installation at the University of Connecticut. All Aboard consists of a newspaper with custom typeface and imagery accompanied with video projection and wire mural.",
+                    "01 <br> All Aboard <br> 05.2023 <br> <br> All Aboard is a multimedia installation at the University of Connecticut. All Aboard consists of a newspaper with custom typeface and imagery accompanied with video projection and wire mural. The installation investigates themes of transportation and infrastructure.<br> <br> All Aboard is an award winning piece in student brand identity from the Connecticut Art Directors Club.",
+                    "01 <br> All Aboard <br> 05.2023 <br> <br> All Aboard is a multimedia installation at the University of Connecticut. All Aboard consists of a newspaper with custom typeface and imagery accompanied with video projection and wire mural. The installation investigates themes of transportation and infrastructure.<br> <br> All Aboard is an award winning piece in student brand identity from the Connecticut Art Directors Club.",
+                    "01 <br> All Aboard <br> 05.2023 <br> <br> All Aboard is a multimedia installation at the University of Connecticut. All Aboard consists of a newspaper with custom typeface and imagery accompanied with video projection and wire mural. The installation investigates themes of transportation and infrastructure.<br> <br> All Aboard is an award winning piece in student brand identity from the Connecticut Art Directors Club.",
+
                     "02 <br> When it Rains <br> 10.2021 <br> <br> When it Rains is an Apple Music playlist cover for a custom made tracklist.",
                     "03 <br> When am I? <br> 10.2022 <br> <br> When am I? is a short zine made at UAL:Central Saint Martins with support from CSM Publications Workshop.",
                     "03 <br> When am I? <br> 10.2022 <br> <br> When am I? is a short zine made at UAL:Central Saint Martins with support from CSM Publications Workshop.",
@@ -115,9 +118,12 @@
                     "05 <br> Deteriora <br> 3.2023 <br> <br> Deteriora is a modified iteration from the typeface Freight. Deteriora comes after an examination of deteriorating transit infrastructure in the U.S. Deteriora is a primary focus in 'All Aboard'<sup>01</sup> and contributed to it earning a gold award from the Connecticut Art Directors Club. Additionally, Deteriora is part of a larger group investigation of 'relations between beings in their physical environment' and how that may translate to type design.",
                     "06 <br> Feel <br> 11.2022 <br> <br> Feel is a publication full of charcoal rubbings. Feel is analogous for the memories we hold and how they may eventually fade over time. The rubbings were collected over a three month period across London documenting particularly tactile surfaces.",
                     "06 <br> Feel <br> 11.2022 <br> <br> Feel is a publication full of charcoal rubbings. Feel is analogous for the memories we hold and how they may eventually fade over time. The rubbings were collected over a three month period across London documenting particularly tactile surfaces.",
-                    "07 <br> Framed <br> 09.2022 <br> <br> Framed is a product from my time studying at Central Saint Martins. Framed allowed me to explore my interests in conceptual art and create a guide to my personal understanding.",
+                    "07 <br> Framed <br> 09.2022 <br> <br> Framed is a publication that allows me to explore my interests in conceptual art and create a guide to my personal understanding.",
                     "08 <br> Heartbeat <br> 08.2022 <br> <br> Heartbeat is an Apple Music playlist cover for a custom made tracklist.",
-                    "09 <br> GD2 <br> 05.2022 <br> <br> 'GD2' is a digital collage made for the University of Connecticut's Graphic Design II: Visual Systems class. The collage is made of scans from a 2022 process book and vintage huskies logo.",
+                    "09 <br> GD2 <br> 05.2022 <br> <br> 'GD2' is a digital collage made for the University of Connecticut's Graphic Design II: Visual Systems class. The collage is made of scans from a 2022 process book and vintage huskies logo. The collage echos UCGD's emphasis on process and interation.",
+                    "10 <br> London <br> 12.2022 <br> <br> 'London' is a selfpublished photobook from my time in London studying at Central Saint Martins. During my time there I found myself grappling with themes of memory and experience. This publications served as a way to share ephemeral moments with people who were not sharing these experiences with me.",
+                    "10 <br> London <br> 12.2022 <br> <br> 'London' is a selfpublished photobook from my time in London studying at Central Saint Martins. During my time there I found myself grappling with themes of memory and experience. This publications served as a way to share ephemeral moments with people who were not sharing these experiences with me.",
+                    "10 <br> London <br> 12.2022 <br> <br> 'London' is a selfpublished photobook from my time in London studying at Central Saint Martins. During my time there I found myself grappling with themes of memory and experience. This publications served as a way to share ephemeral moments with people who were not sharing these experiences with me.",
                     // Add more text as needed
                 ];
                 return textArray[index];
@@ -133,6 +139,15 @@
             <div class="text-container" id="textContainer"></div>
         </div>
         <div class="image-container">
+            <img src="Images/aab5.jpg" alt="All Aboard">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        
+         <div class="image-container">
+            <img src="Images/aade.gif" alt="All Aboard">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
             <img src="Images/wirip.jpg" alt="When it Rains">
             <div class="text-container" id="textContainer"></div>
         </div>
@@ -141,7 +156,7 @@
             <div class="text-container" id="textContainer"></div>
         </div>
         <div class="image-container">
-            <img src="Images/wais2.jpg" alt="When am I?">
+            <img src="Images/wais2.png" alt="When am I?">
             <div class="text-container" id="textContainer"></div>
         </div>
         <div class="image-container">
@@ -178,6 +193,18 @@
         </div>
         <div class="image-container">
             <img src="Images/gd2.JPEG" alt="GD2">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/lpb1.png" alt="LDN">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/lpb2.png" alt="LDN">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/lpb3.png" alt="LDN">
             <div class="text-container" id="textContainer"></div>
         </div>
 

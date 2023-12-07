@@ -1,9 +1,9 @@
 body {
   
 
-
+background-image: url(Images/IMG_1633_1.gif);
 background-repeat:no-repeat ;
-background-size:100%;
+background-size:cover;
 margin: 0;
 padding: 1% ;
 
@@ -41,8 +41,6 @@ a{
 }
 a:hover {
   color: dodgerblue;
-
-  font-size: 1.75em;
 font-weight: 700;
 font-style: normal;
 
