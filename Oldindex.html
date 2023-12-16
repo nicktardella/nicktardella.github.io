@@ -1,167 +1,242 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>ntardella</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" type="Images/png" href="Images/nt.png">
-
-    <nav>
-<a id="ntLink" href="index.html">nt</a>
-<a href="aboutme.html">about me</a> 
-</nav>
-
-<br>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const ntLink = document.getElementById("ntLink");
-    const images = document.querySelectorAll(".images img");
-    const popupText = document.getElementById("popupText");
-    let currentIndex = 0;
-
-    function showImage(index) {
-      images.forEach((img, i) => {
-        img.style.display = i === index ? "block" : "none";
-      });
-    }
-
-    function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    }
-
-    function prevImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
-    }
-
-    images.forEach((img, i) => {
-      img.style.display = i === 0 ? "block" : "none";
-      img.addEventListener("click", function () {
-        nextImage();
-      });
-    });
-
-    ntLink.addEventListener("click", function (event) {
-      event.preventDefault();
-      showPopupText("This is just a bit of work lol");
-    });
-
-    ntLink.addEventListener("dblclick", function () {
-      popupText.style.display = "none";
-    });
-
-    document.addEventListener("keydown", function (event) {
-      switch (event.key) {
-        case "ArrowLeft":
-          prevImage();
-          break;
-        case "ArrowRight":
-          nextImage();
-          break;
-      }
-    });
-
-    function showPopupText(text) {
-      popupText.innerHTML = text;
-      popupText.style.display = "block";
-    }
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <style>
-
-
-
-a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  cursor: pointer;
-}
-
-        .images {
-            text-align: left;
-        }
-
-        .images img {
-            width: 40%; /* Set a maximum width for the images */
-            Max-height: 100%; /* Set a maximum height for the images (adjust as needed) */
-            margin-bottom: 10px; /* Add space between images */
-        }
-
-        .table-container {
-            clear: both; /* Clear the float from the table */
-        }
-
-        table {
-            width: 100%;
-        }
-
-        .instagram-link {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            text-align: right;
-        }
-
-        .instagram-link img {
-            width: 100px;
-            height: 100px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://use.typekit.net/ish2oli.css">
 </head>
 
 <body>
+    <nav>
+        <p><b><i>nt</i></b></p>
+        <p><a href="aboutme.html"><b>+<i>about me</i></b></a></p>
+    </nav>
+
     <div class="images">
-        <img src="Images/aab9.jpg" alt="All Aboard">
-        <img src="Images/wirip.jpg" alt="When It Rains">
-        <img src="Images/wai.png" alt="When am I">
-        <img src="Images/wais2.jpg" alt="When am I">
-        <img src="Images/cutthisposter.png" alt="Cut Poster">
-        <img src="Images/Deteriora.JPG" alt="Deteriora">
-        <img src="Images/ecography.png" alt="Ecography">
-        <img src="Images/Feel3.png" alt="Feel">
-        <img src="Images/Feel4.png" alt="Feel">
-        <img src="Images/framed3.png" alt="Framed">
-        <img src="Images/HBCover.jpg" alt="Heartbeat">
-        <img src="Images/gd2.JPEG" alt="GD2">
-        <img src="Images/lpb3.png" alt="London Photo Book">
-        <img src="Images/Pissin.jpg" alt="Pissin">
-        <img src="Images/ratealert.png" alt="Rate Alert">
-        <img src="Images/lesscars.png" alt="Less Cars">
-        <img src="Images/ndtsft.png" alt="No Distance Too Short for Transit">
-        <img src="Images/ndtsft2.png" alt="No Distance too Short for Transit">
-        <img src="Images/ssfc.jpg" alt="School Strike for Climate">
-        <!-- Add more images as needed -->
+        <div class="image-container">
+            <img src="Images/aab9.jpg" alt="All Aboard">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/aab5.jpg" alt="All Aboard">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+         <div class="image-container">
+            <img src="Images/aade.gif" alt="All Aboard">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/wirip.jpg" alt="When it Rains">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/wai.png" alt="When am I?">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/wais2.png" alt="When am I?">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/cutthisposter.png" alt="Interactive (Literal)">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/interactive.png" alt="Interactive (Literal)">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/Deteriora.JPG" alt="Deteriora">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/ecography.png" alt="Ecography">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/Feel3.png" alt="Feel">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/Feel4.png" alt="Feel">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/framed3.png" alt="Framed">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/HBCover.jpg" alt="Heartbeat">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/gd2.JPEG" alt="GD2">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/lpb1.png" alt="LDN">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/lpb2.png" alt="LDN">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+        <div class="image-container">
+            <img src="Images/lpb3.png" alt="LDN">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+    <div id="popupText" style="display: none; font-size: 1em;">
+        <!-- Pop-up text will appear here when a tab is clicked -->
     </div>
-
-
-    
-    </div>
-
-<div id="popupText" style="display: none; font-size: 9pt;">
-  <!-- Pop-up text will appear here when a tab is clicked -->
-</div>
 
     <style>
-  @import url("https://use.typekit.net/ish2oli.css");
-</style>
+        body {
 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+    
+
+        nav p {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 70%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .image-container {
+            position: relative;
+            max-width: calc(50% - 7.5px); /* 7.5px is half of the desired spacing (15px) */
+        }
+
+        .images img {
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text-container {
+            width: calc(50% - 7.5px); /* 7.5px is half of the desired spacing (15px) */
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            font-size: 1em;
+            text-align: left;
+        }
+
+        @media screen and (max-width: 900px) {
+            .images img {
+                width: 100%;
+                max-width: none;
+            }
+
+            .text-container {
+                position: relative;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".images img");
+            const popupText = document.getElementById("popupText");
+            const textContainer = document.getElementById("textContainer"); // Assuming you have a container for text
+            let currentIndex = 0;
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.style.display = i === index ? "block" : "none";
+                });
+                // Change text dynamically based on the current image
+                textContainer.innerHTML = getImageText(index);
+            }
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }
+
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            }
+
+            images.forEach((img, i) => {
+                img.style.display = i === 0 ? "block" : "none";
+                img.addEventListener("click", function () {
+                    nextImage();
+                });
+
+                // Create and append a text container for each image
+                const newContainer = document.createElement("div");
+                newContainer.className = "text-container";
+                newContainer.id = `textContainer_${i}`;
+                textContainer.appendChild(newContainer);
+            });
+
+            document.addEventListener("keydown", function (event) {
+                switch (event.key) {
+                    case "ArrowLeft":
+                        prevImage();
+                        break;
+                    case "ArrowRight":
+                        nextImage();
+                        break;
+                }
+            });
+
+            function getImageText(index) {
+                // Add your text for each image here
+                const textArray = [
+                    "01 <br> All Aboard <br> 05.2023 <br> <br> All Aboard is a multimedia installation at the University of Connecticut. All Aboard consists of a newspaper with custom typeface and imagery accompanied with video projection and wire mural. The installation investigates themes of transportation and infrastructure.<br> <br> All Aboard is an award winning piece in student brand identity from the Connecticut Art Directors Club.",
+                    "01 <br> All Aboard <br> 05.2023 <br> <br> All Aboard is a multimedia installation at the University of Connecticut. All Aboard consists of a newspaper with custom typeface and imagery accompanied with video projection and wire mural. The installation investigates themes of transportation and infrastructure.<br> <br> All Aboard is an award winning piece in student brand identity from the Connecticut Art Directors Club.",
+                    "01 <br> All Aboard <br> 05.2023 <br> <br> All Aboard is a multimedia installation at the University of Connecticut. All Aboard consists of a newspaper with custom typeface and imagery accompanied with video projection and wire mural. The installation investigates themes of transportation and infrastructure.<br> <br> All Aboard is an award winning piece in student brand identity from the Connecticut Art Directors Club.",
+
+                    "02 <br> When it Rains <br> 10.2021 <br> <br> When it Rains is an Apple Music playlist cover for a custom made tracklist.",
+                    "03 <br> When am I? <br> 10.2022 <br> <br> When am I? is a short zine made at UAL:Central Saint Martins with support from CSM Publications Workshop.",
+                    "03 <br> When am I? <br> 10.2022 <br> <br> When am I? is a short zine made at UAL:Central Saint Martins with support from CSM Publications Workshop.",
+                    "04 <br> Interactive (Literal) <br> 9.2022 <br> <br> A series of six posters that pushes the notion of interactive design.",
+                    "04 <br> Interactive (Literal) <br> 9.2022 <br> <br> A series of six posters that pushes the notion of interactive design.",
+                    "05 <br> Deteriora <br> 3.2023 <br> <br> Deteriora is a modified iteration from the typeface Freight. Deteriora comes after an examination of deteriorating transit infrastructure in the U.S. Deteriora is a primary focus in 'All Aboard'<sup>01</sup> and contributed to it earning a gold award from the Connecticut Art Directors Club. Additionally, Deteriora is part of a larger group investigation of 'relations between beings in their physical environment' and how that may translate to type design.",
+                    "05 <br> Deteriora <br> 3.2023 <br> <br> Deteriora is a modified iteration from the typeface Freight. Deteriora comes after an examination of deteriorating transit infrastructure in the U.S. Deteriora is a primary focus in 'All Aboard'<sup>01</sup> and contributed to it earning a gold award from the Connecticut Art Directors Club. Additionally, Deteriora is part of a larger group investigation of 'relations between beings in their physical environment' and how that may translate to type design.",
+                    "06 <br> Feel <br> 11.2022 <br> <br> Feel is a publication full of charcoal rubbings. Feel is analogous for the memories we hold and how they may eventually fade over time. The rubbings were collected over a three month period across London documenting particularly tactile surfaces.",
+                    "06 <br> Feel <br> 11.2022 <br> <br> Feel is a publication full of charcoal rubbings. Feel is analogous for the memories we hold and how they may eventually fade over time. The rubbings were collected over a three month period across London documenting particularly tactile surfaces.",
+                    "07 <br> Framed <br> 09.2022 <br> <br> Framed is a publication that allows me to explore my interests in conceptual art and create a guide to my personal understanding.",
+                    "08 <br> Heartbeat <br> 08.2022 <br> <br> Heartbeat is an Apple Music playlist cover for a custom made tracklist.",
+                    "09 <br> GD2 <br> 05.2022 <br> <br> 'GD2' is a digital collage made for the University of Connecticut's Graphic Design II: Visual Systems class. The collage is made of scans from a 2022 process book and vintage huskies logo. The collage echos UCGD's emphasis on process and interation.",
+                    "10 <br> London <br> 12.2022 <br> <br> 'London' is a selfpublished photobook from my time in London studying at Central Saint Martins. During my time there I found myself grappling with themes of memory and experience. This publications served as a way to share ephemeral moments with people who were not sharing these experiences with me.",
+                    "10 <br> London <br> 12.2022 <br> <br> 'London' is a selfpublished photobook from my time in London studying at Central Saint Martins. During my time there I found myself grappling with themes of memory and experience. This publications served as a way to share ephemeral moments with people who were not sharing these experiences with me.",
+                    "10 <br> London <br> 12.2022 <br> <br> 'London' is a selfpublished photobook from my time in London studying at Central Saint Martins. During my time there I found myself grappling with themes of memory and experience. This publications served as a way to share ephemeral moments with people who were not sharing these experiences with me.",
+                    // Add more text as needed
+                ];
+                return textArray[index];
+            }
+        });
+    </script>
 </body>
+
 </html>

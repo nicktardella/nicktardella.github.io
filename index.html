@@ -14,19 +14,32 @@
 
     <style>
         
-   body{ background-image: url(Images/IMG_1633_1.gif);
-background-repeat:no-repeat ;
-background-size:cover;
-margin: 0;
-padding: 1% ;
- }
+        @media screen and (max-width: 900px) {
+   .images img {
+            width: 70%;
+            max-height: 100%;
+            margin-bottom: 10px;
+        }
+         .text-container {
+            position: relative;
+            top: 0;
+            
+            width: 40%;
+            background-color: none;
+            padding: 0px;
+            font-size: 9pt;
+        }
+}
+
 
         .images {
             text-align: left;
+
         }
 
         .image-container {
             position: relative;
+            left: 19%;
         }
 
         .images img {
